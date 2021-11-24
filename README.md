@@ -1,1 +1,1 @@
-# Project-1
+# Project for study React
