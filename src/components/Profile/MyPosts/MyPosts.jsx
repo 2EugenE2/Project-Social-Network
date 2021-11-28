@@ -16,7 +16,7 @@ const MyPosts = (props) => {
       </div>
       <div className={s.posts}>
         <Post messege='Hey, how are you?' />
-        <Post messege='I am fine, thenks' />
+        <Post messege='Хорошо' />
       </div>
     </div>
   )
