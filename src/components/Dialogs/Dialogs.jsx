@@ -1,10 +1,10 @@
 import React from "react"
 import s from './Dialogs.module.css'
- 
+
 
 const Dialogs = (props) => {
 
-    let dialogsData = [
+    let dialogs = [
         { id: 1, name: 'Dimych' },
         { id: 2, name: 'Jenya' },
         { id: 3, name: 'Katya' },
@@ -12,31 +12,26 @@ const Dialogs = (props) => {
         { id: 5, name: 'Sergio' },
         { id: 6, name: 'Gary' }
     ]
-
-    let messagesData = [
+    let messages = [
         { id: 1, message: 'Hey' },
         { id: 2, message: 'How are you?' },
         { id: 3, message: 'Yo-Yo' },
         { id: 4, message: 'Have nice day' }
     ]
-    return (
-        <div className={s.dialogs}>
-            <div className={s.dialogsItems}>
 
-                {
-                    
-                }
-                {/* <DialogItem name={dialogsData[0].name} id={dialogsData[0].id} /> */}
-                {/* <DialogItem name={dialogsData[1].name} id={dialogsData[1].id} /> */}
-                {/* <DialogItem name={dialogsData[2].name} id={dialogsData[2].id} /> */}
+    let dialogsElements = dialogs.map( d => <DialogItem name={d.name} id={d.id} />);
+    let messagesElements = messages.map( m => <Message message={m.message} />);
+
+    return (
+        <div className={s.dialogs}> 
+            <div className={s.dialogsItems}>
+                {dialogsElements}
             </div>
             <div className={s.messages}>
-                {/* <Message message={messagesData[0].message}/>
-            <Message message={messagesData[1].message}/> */}
-
+                {messagesElements}
             </div>
-        </div >
+        </div>
     )
 }
 
-export default Dialogs
+export default Dialogs;

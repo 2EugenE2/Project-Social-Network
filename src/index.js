@@ -4,7 +4,15 @@ import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 
-ReactDOM.render(<App />, 
+
+let posts = [
+    {id: 1, message: 'Hi , how are you?', likesCount: 12},
+    {id: 2, message: 'what about you?', likesCount: 11},
+    {id: 3, message: 'BlaBlaBla', likesCount: 11},
+    {id: 4, message: 'Oh yech', likesCount: 11},
+  ]
+
+ReactDOM.render(<App posts={posts} />, 
     document.getElementById('root')
     )
 
